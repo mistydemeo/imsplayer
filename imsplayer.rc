@@ -1,0 +1,64 @@
+#include <windows.h>
+
+#include "wx/msw/wx.rc"
+#define wxUSE_NO_MANIFEST 0
+
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    2010,07,02,0
+ //FILEVERSION    TK_MAJOR_VERSION,TK_MINOR_VERSION,TK_RELEASE_LEVEL,TK_RELEASE_SERIAL
+ PRODUCTVERSION 2010,07,02,0
+ //PRODUCTVERSION TK_MAJOR_VERSION,TK_MINOR_VERSION,TK_RELEASE_LEVEL,TK_RELEASE_SERIAL
+ FILEFLAGSMASK	0x3fL
+#ifdef DEBUG
+ FILEFLAGS	VS_FF_DEBUG
+#else
+ FILEFLAGS	0x0L
+#endif
+ FILEOS		VOS__WINDOWS32
+ FILETYPE	VFT_APP
+ FILESUBTYPE	0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "IMS Player\0"
+            VALUE "OriginalFilename", "imsplayer" ".exe\0"
+            VALUE "CompanyName", "http://lab.tcltk.co.kr\0"
+            VALUE "FileVersion", "1.0"
+            VALUE "LegalCopyright", "Copyright (C) 2010 by inhak.min@gmail.com\0"
+            VALUE "ProductName", "IMS Player\0"
+            VALUE "ProductVersion", "1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+//
+// Icon
+// 
+//   The icon whose name or resource ID is lexigraphically first, is used
+//   as the application's icon.
+//
+
+app                      ICON    DISCARDABLE     "imsplayer.ico"
+
+#if STATIC_BUILD
+#include "tk_base.rc"
+#endif
+
+//
+// This enables themed scrollbars in XP by trying to use comctl32 v6.
+//
+
+#ifndef RT_MANIFEST
+#define RT_MANIFEST     24
+#endif
+#ifndef CREATEPROCESS_MANIFEST_RESOURCE_ID
+#define CREATEPROCESS_MANIFEST_RESOURCE_ID 1
+#endif
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "imsplayer.exe.manifest"
