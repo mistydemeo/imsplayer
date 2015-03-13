@@ -185,3 +185,9 @@ enum {
 			wxString(name, wxConvUTF8) + \
 			wxT(".png"), wxBITMAP_TYPE_PNG)
 #endif
+
+// Windows defines a separate BINARY open mode, which doesn't
+// normalize line endings, but Unix doesn't make this distinction
+#if !defined(__WIN32) && !defined(__WIN64)
+#  define O_BINARY 0
+#endif
