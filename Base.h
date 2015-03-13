@@ -186,8 +186,17 @@ enum {
 			wxT(".png"), wxBITMAP_TYPE_PNG)
 #endif
 
-// Windows defines a separate BINARY open mode, which doesn't
-// normalize line endings, but Unix doesn't make this distinction
 #if !defined(__WIN32) && !defined(__WIN64)
-#  define O_BINARY 0
+	// Windows defines a separate BINARY open mode, which doesn't
+	// normalize line endings, but Unix doesn't make this distinction
+#	define O_BINARY 0
+
+	// This convenience function is defined by Windows but not other OSs
+	// From: http://stackoverflow.com/a/14896818
+	inline int MulDiv(int number, int numerator, int denominator) {
+		long long ret = number;
+		ret *= numerator;
+		ret /= denominator;
+		return (int) ret;
+	}
 #endif
