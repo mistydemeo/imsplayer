@@ -159,7 +159,7 @@ void ButtonPanel::OnOpenFiles(wxCommandEvent& WXUNUSED(event))
 		wxT("Open File(s)"), wxEmptyString,
 		wxEmptyString,
 		wxT("IMS Files (*.ims)|*.ims|All Files (*)|*"),
-		wxMULTIPLE|wxOPEN
+		wxFD_MULTIPLE|wxFD_OPEN
 	);
     dlg.CentreOnParent();
 
