@@ -473,7 +473,7 @@ void GSlider::OnMouse(wxMouseEvent &event)
 	
     if(!onKnob){
 		if(event.LeftDown()){
-			GetParent()->ProcessEvent(event); //Let left clicks bleed through the slider background to the parent.
+			GetParent()->GetEventHandler()->ProcessEvent(event); //Let left clicks bleed through the slider background to the parent.
 		}
 		//if(!event.LeftIsDown() && hover == TRUE){hover = FALSE; Refresh();}
 	}
@@ -549,7 +549,7 @@ void GSlider::OnMouse(wxMouseEvent &event)
 	if(event.RightUp())
 	{
 		//Alter this to give the object it's own right click properties
-		GetParent()->ProcessEvent(event); //Let right clicks bleed through to the parent.
+		GetParent()->GetEventHandler()->ProcessEvent(event); //Let right clicks bleed through to the parent.
 	}
 } 
 

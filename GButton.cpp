@@ -371,7 +371,7 @@ void GButton::OnMouse(wxMouseEvent &event)
 	if(event.RightUp())
 	{
 		//Alter this to give the object it's own right click properties
-		GetParent()->ProcessEvent(event); //Let right clicks bleed through to the parent.
+		GetParent()->GetEventHandler()->ProcessEvent(event); //Let right clicks bleed through to the parent.
 	}
 } 
 
