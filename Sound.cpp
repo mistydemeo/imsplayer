@@ -37,7 +37,7 @@ PlayThread::PlayThread(MainFrame *parent,
 	
 	// PEAK METER
     m_meter->Stop();
-	// Peak Meter ¾÷µ¥ÀÌÆ® ÁÖ±â
+	// Peak Meter ì—…ë°ì´íŠ¸ ì£¼ê¸°
     m_meter->Start(30);	// 30ms
 }
 

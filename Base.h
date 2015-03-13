@@ -120,9 +120,9 @@ using namespace std;
 #define STOPPED		2
 #define SONG_END	3
 
-#define REPEAT_NO		0	// Áö±İ °î ¿¬ÁÖÇÏ°í ÁßÁö
-#define REPEAT_ALL		1	// Áö±İ °î ¿¬ÁÖ ³¡³ª¸é ´ÙÀ½°îÀ¸·Î..
-#define REPEAT_THIS		2	// Áö±İ °î ¹İº¹ ¿¬ÁÖ
+#define REPEAT_NO		0	// ì§€ê¸ˆ ê³¡ ì—°ì£¼í•˜ê³  ì¤‘ì§€
+#define REPEAT_ALL		1	// ì§€ê¸ˆ ê³¡ ì—°ì£¼ ëë‚˜ë©´ ë‹¤ìŒê³¡ìœ¼ë¡œ..
+#define REPEAT_THIS		2	// ì§€ê¸ˆ ê³¡ ë°˜ë³µ ì—°ì£¼
 
 #define PREPARE_BUFFER_COUNT	20
 #define PREPARE_BUFFER_SIZE		512*2

@@ -25,12 +25,12 @@
 	----------------------------------------------------------------------------
 	SETFREQ.C
 	
-	¾îÇÃ¸®(aflee04@hotmail.com), 2006/02/25
+	ì–´í”Œë¦¬(aflee04@hotmail.com), 2006/02/25
 
-	SETFREQ.ASM¿¡¼­ ÁÖ¼® Ã³¸®µÈ SetFreq() ÇÔ¼öÀÇ CÄÚµå¸¦
-	±×´ë·Î ¿Å±ä ÈÄ ÀÏºÎ ¿À·ù¸¦ ¼öÁ¤ÇÔ.
+	SETFREQ.ASMì—ì„œ ì£¼ì„ ì²˜ë¦¬ëœ SetFreq() í•¨ìˆ˜ì˜ Cì½”ë“œë¥¼
+	ê·¸ëŒ€ë¡œ ì˜®ê¸´ í›„ ì¼ë¶€ ì˜¤ë¥˜ë¥¼ ìˆ˜ì •í•¨.
 
-	Borland C++ 5.6.4 for Win32¿¡¼­ Å×½ºÆ® ÇÔ.
+	Borland C++ 5.6.4 for Win32ì—ì„œ í…ŒìŠ¤íŠ¸ í•¨.
 
 	bcc32 -c -w SETFREQ.C
 	----------------------------------------------------------------------------
@@ -40,7 +40,7 @@
 
 //------------------------------------------------------------------------------
 extern int pitchRange;	// pitch bend range (global)
-						// ADLIB.C¿¡ Á¤ÀÇµÇ¾î ÀÖ´Ù
+						// ADLIB.Cì— ì •ì˜ë˜ì–´ ìˆë‹¤
 
 unsigned short fNumTbl[192] = {
 	0x02B2, 0x02B4, 0x02B7, 0x02B9, 0x02BC, 0x02BE, 0x02C1, 0x02C3, 0x02C6, 0x02C9,
@@ -93,7 +93,7 @@ unsigned char noteMOD12[12 * 8] = {
 
 //------------------------------------------------------------------------------
 //void SndOutput(int addr, int dataVal);	// outputs 'dataVal' at register 'addr'
-										// OUTCHIP.C ÆÄÀÏ¿¡ Á¤ÀÇµÇ¾î ÀÖ´Ù
+										// OUTCHIP.C íŒŒì¼ì— ì •ì˜ë˜ì–´ ìˆë‹¤
 
 #define NB_NOTES			96			// 8 octave of 12 notes
 #define OCTAVE				12			// half-tone by octave

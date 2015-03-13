@@ -60,7 +60,7 @@ typedef struct {
 	int freqVibrato;
 	int envelopeScale;
 	int fmType;
-} OP_PARAM32;	// 4 byte X 13°³
+} OP_PARAM32;	// 4 byte X 13ê°œ
 
 typedef struct {
 	int	instType;
@@ -69,10 +69,10 @@ typedef struct {
 	OP_PARAM32 op2;
 	int	op1WaveForm;
 	int	op2WaveForm;
-} MYADLIB_BNK_INST_RECORD32;		// 4 byte X 30°³
+} MYADLIB_BNK_INST_RECORD32;		// 4 byte X 30ê°œ
 
 typedef struct {
-	char *raw; // bnk ÆÄÀÏ ³»¿ë ÀüÃ¼¸¦ ÅëÂ°·Î ÀĞ¾î¿Ã ¹öÆÛ
+	char *raw; // bnk íŒŒì¼ ë‚´ìš© ì „ì²´ë¥¼ í†µì§¸ë¡œ ì½ì–´ì˜¬ ë²„í¼
     char *rawPtr;
 
 	MYADLIB_BNK_HEADER header;
@@ -89,8 +89,8 @@ class Bnk
 {
 public:
 	MYADLIB_BNK *m_bnk;
-	wxString m_fileName; // °æ·Î¸¦ Æ÷ÇÔÇÑ ÆÄÀÏ¸í
-	int	m_fileSize; // raw ¹öÆÛ·Î ÀĞ¾îµéÀÎ ½ÇÁ¦ Å©±â
+	wxString m_fileName; // ê²½ë¡œë¥¼ í¬í•¨í•œ íŒŒì¼ëª…
+	int	m_fileSize; // raw ë²„í¼ë¡œ ì½ì–´ë“¤ì¸ ì‹¤ì œ í¬ê¸°
 
 public:
 	Bnk();

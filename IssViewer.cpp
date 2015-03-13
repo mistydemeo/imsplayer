@@ -66,7 +66,7 @@ void IssViewer::DrawPanel(wxPaintDC &dc)
 
 	if ( m_issLabel == NULL )
 	{
-		// ISS °¡»ç´Â ÇÑÁÙÀÌ ÃÖ´ë 64bytes
+		// ISS ê°€ì‚¬ëŠ” í•œì¤„ì´ ìµœëŒ€ 64bytes
 		m_issLabel= new GHanLabel(this, wxID_ANY, 
 				wxDefaultPosition, wxSize(0,16),
 				"", wxColour(wxT("#0F639C")), wxColour(wxT("#A8E5F6")));

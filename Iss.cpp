@@ -110,19 +110,19 @@ bool Iss::Open(wxString file)
 	return true;
 }
 
-// �ۻ簡
+// 작사가
 char *Iss::GetWriter()
 {
 	return (char *)m_header.writer;
 }
 
-// �۰
+// 작곡가
 char *Iss::GetComposer()
 {
 	return (char *)m_header.composer;
 }
 
-// ����
+// 가수
 wxString Iss::GetSinger()
 {
 	char singer[30];

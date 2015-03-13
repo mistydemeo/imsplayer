@@ -2,7 +2,7 @@
 
 Ims::Ims () 
 {
-	m_basicTempo = 120;		// ÇöÀç ºü¸£±â
+	m_basicTempo = 120;		// í˜„ìž¬ ë¹ ë¥´ê¸°
 	m_songDataTotalIndex = 0;
 	m_songDataIndex = 0;
 	m_tick = 0;
@@ -77,7 +77,7 @@ bool Ims::Open(wxString file)
 	fseek(fp, 0, SEEK_END);
 	m_fileSize = ftell(fp);
 
-	// ÆÄÀÏ »çÀÌÁî°¡ 1MB¸¦ ³Ñ¾î¼­¸é ¿¡·¯·Î °£ÁÖÇÔ
+	// íŒŒì¼ ì‚¬ì´ì¦ˆê°€ 1MBë¥¼ ë„˜ì–´ì„œë©´ ì—ëŸ¬ë¡œ ê°„ì£¼í•¨
 	if (m_fileSize > 1024*1024) {
 		fclose(fp); 
 		return NULL;
@@ -163,9 +163,9 @@ again:
 	else 
 		curCode = stCode;
 
-	voice = curCode & 0x0F;	// ¿À¸¥ÂÊ 4ºñÆ®¸¦ ¾ò´Â´Ù (Ã¤³Î ¹øÈ£)
+	voice = curCode & 0x0F;	// ì˜¤ë¥¸ìª½ 4ë¹„íŠ¸ë¥¼ ì–»ëŠ”ë‹¤ (ì±„ë„ ë²ˆí˜¸)
 
-	// ¿ÞÂÊ 4ºñÆ®¿¡ ÀÌº¥Æ® Á¾·ù°¡ ÀúÀåµÇ¾î ÀÖ´Ù
+	// ì™¼ìª½ 4ë¹„íŠ¸ì— ì´ë²¤íŠ¸ ì¢…ë¥˜ê°€ ì €ìž¥ë˜ì–´ ìžˆë‹¤
 	switch (curCode & 0xF0) 
 	{	
 		case 0x80: // note off
@@ -200,7 +200,7 @@ again:
 			index = m_ims->songData[m_songDataIndex];
 			instIndexInBnk = m_ims->instIndex[index].index;
 
-			// ¾Ç±â°¡ ÀÖ´Ù¸é..
+			// ì•…ê¸°ê°€ ìžˆë‹¤ë©´..
 			if ( instIndexInBnk >= 0 && 
 					instIndexInBnk < m_ims->m_bnk->header.totalEntry)
 			{

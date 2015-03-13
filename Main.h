@@ -45,7 +45,7 @@ private:
 };
 
 //
-// MyTcl ¸ŞÀÎ ÇÁ·¹ÀÓ
+// MyTcl ë©”ì¸ í”„ë ˆì„
 //
 class MainFrame : public wxFrame
 {

@@ -1,11 +1,11 @@
 #ifndef __FMOPL_H_
 #define __FMOPL_H_
 
-#ifdef __cplusplus	// √ﬂ∞°
-extern "C" {		// √ﬂ∞°
-#endif				// √ﬂ∞°
+#ifdef __cplusplus	// Ï∂îÍ∞Ä
+extern "C" {		// Ï∂îÍ∞Ä
+#endif				// Ï∂îÍ∞Ä
 
-#define HAS_YM3812	1	// √ﬂ∞°
+#define HAS_YM3812	1	// Ï∂îÍ∞Ä
 
 /* --- select emulation chips --- */
 #define BUILD_YM3812 (HAS_YM3812)
@@ -26,14 +26,14 @@ typedef signed short	INT16;   /* signed 16bit   */
 typedef signed int		INT32;   /* signed 32bit   */
 #endif
 
-//typedef stream_sample_t OPLSAMPLE;	//¡÷ºÆ √≥∏Æ
+//typedef stream_sample_t OPLSAMPLE;	//Ï£ºÏÑù Ï≤òÎ¶¨
 
-#if (OPL_SAMPLE_BITS==16)	// ¡÷ºÆ ¡¶∞≈
-typedef INT16 OPLSAMPLE;	// ¡÷ºÆ ¡¶∞≈
-#endif						// ¡÷ºÆ ¡¶∞≈
-#if (OPL_SAMPLE_BITS==8)	// ¡÷ºÆ ¡¶∞≈
-typedef INT8 OPLSAMPLE;		// ¡÷ºÆ ¡¶∞≈
-#endif						// ¡÷ºÆ ¡¶∞≈
+#if (OPL_SAMPLE_BITS==16)	// Ï£ºÏÑù Ï†úÍ±∞
+typedef INT16 OPLSAMPLE;	// Ï£ºÏÑù Ï†úÍ±∞
+#endif						// Ï£ºÏÑù Ï†úÍ±∞
+#if (OPL_SAMPLE_BITS==8)	// Ï£ºÏÑù Ï†úÍ±∞
+typedef INT8 OPLSAMPLE;		// Ï£ºÏÑù Ï†úÍ±∞
+#endif						// Ï£ºÏÑù Ï†úÍ±∞
 
 
 typedef void (*OPL_TIMERHANDLER)(void *param,int timer,double interval_Sec);
@@ -113,8 +113,8 @@ void Y8950SetUpdateHandler (void *chip, OPL_UPDATEHANDLER UpdateHandler, void *p
 
 #endif
 
-#ifdef __cplusplus	// √ﬂ∞°
-}					// √ﬂ∞°
-#endif				// √ﬂ∞°
+#ifdef __cplusplus	// Ï∂îÍ∞Ä
+}					// Ï∂îÍ∞Ä
+#endif				// Ï∂îÍ∞Ä
 
 #endif /* __FMOPL_H_ */

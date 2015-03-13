@@ -32,17 +32,17 @@ typedef struct {
 
 typedef struct {
 	char name[8+1];
-    int	index;						// BNK ÆÄÀÏ¿¡¼­ÀÇ ÀÎµ¦½º ¹øÈ£
+    int	index;						// BNK íŒŒì¼ì—ì„œì˜ ì¸ë±ìŠ¤ ë²ˆí˜¸
 } IMS_INST;
 
 typedef struct {
-	unsigned char *raw;				// IMS ÆÄÀÏ ³»¿ë ÀüÃ¼¸¦ ÅëÂ°·Î ÀĞ¾î¿Ã ¹öÆÛ
+	unsigned char *raw;				// IMS íŒŒì¼ ë‚´ìš© ì „ì²´ë¥¼ í†µì§¸ë¡œ ì½ì–´ì˜¬ ë²„í¼
 	unsigned char *rawPtr;
 //	----------------------------------------------------------------------------
 	IMS_HEADER header;
 	unsigned char *songData;
 //	----------------------------------------------------------------------------
-	int instCount;					// »ç¿ëµÈ ¾Ç±â¼ö
+	int instCount;					// ì‚¬ìš©ëœ ì•…ê¸°ìˆ˜
 	IMS_INST *instIndex; 
 //	----------------------------------------------------------------------------
 	MYADLIB_BNK	*m_bnk;
@@ -57,8 +57,8 @@ class Ims
 public:
 	MYADLIB_IMS *m_ims;
 	
-	wxString m_fileName; 	// °æ·Î¸¦ Æ÷ÇÔÇÑ ÆÄÀÏ¸í
-	int	m_fileSize;			// raw ¹öÆÛ·Î ÀĞ¾îµéÀÎ ½ÇÁ¦ Å©±â
+	wxString m_fileName; 	// ê²½ë¡œë¥¼ í¬í•¨í•œ íŒŒì¼ëª…
+	int	m_fileSize;			// raw ë²„í¼ë¡œ ì½ì–´ë“¤ì¸ ì‹¤ì œ í¬ê¸°
 
 	int m_basicTempo;
 	int	m_songDataIndex;

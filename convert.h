@@ -9,14 +9,14 @@ extern "C" {
 #include <string.h>
 
 ///////////////////////////////////////////////////////////////////
-// »ç¿ëÀÚ°¡ È£ÃâÇÏ´Â ÇÔ¼ö 
-//	nFlag == 1 : ¿Ï¼ºÇü -> Á¶ÇÕÇü
-//	nFlag == 0 : Á¶ÇÕÇü -> ¿Ï¼ºÇü
+// ì‚¬ìš©ìê°€ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ 
+//	nFlag == 1 : ì™„ì„±í˜• -> ì¡°í•©í˜•
+//	nFlag == 0 : ì¡°í•©í˜• -> ì™„ì„±í˜•
 void	han_conv(int nFlag, char* strSrc, char* strDest);
 
-// ¿Ï¼ºÇüÀ» Á¶ÇÕÇüÀ¸·Î º¯È¯ÇÏ°í ½ÍÀ» ¶§, »ç¿ë ¿¹ 
+// ì™„ì„±í˜•ì„ ì¡°í•©í˜•ìœ¼ë¡œ ë³€í™˜í•˜ê³  ì‹¶ì„ ë•Œ, ì‚¬ìš© ì˜ˆ 
 //	char buf[16];
-//	han_conv(1, "ÇÑ±ÛÄÚµåº¯È¯", buf);
+//	han_conv(1, "í•œê¸€ì½”ë“œë³€í™˜", buf);
 unsigned int 	Binary(unsigned int val, unsigned int range);
 void 		TG2KS(unsigned char *c1, unsigned char *c2);
 void 		KS2TG(unsigned char *c1, unsigned char *c2);

@@ -1,9 +1,9 @@
 #ifndef __OUTCHIP_H_
 #define __OUTCHIP_H_
 
-#ifdef __cplusplus	// Ãß°¡
-extern "C" {		// Ãß°¡
-#endif				// Ãß°¡
+#ifdef __cplusplus	// ì¶”ê°€
+extern "C" {		// ì¶”ê°€
+#endif				// ì¶”ê°€
 
 extern void *ym3812p;
 

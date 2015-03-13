@@ -70,9 +70,9 @@ void GHanLabel::InitHangul()
 	m_han->LoadEngFont(wxT("ENG.FNT"), ENG_256);
 	
 	m_han->SetSpecialFontRoom(SPECIAL_CODE);
-	// Á¶ÇÕÇü Æ¯¼ö¹®ÀÚ
+	// ì¡°í•©í˜• íŠ¹ìˆ˜ë¬¸ìž
 	//m_han->LoadSpecialFont("IKS.FNT", SPECIAL_CODE);
-	// »ïº¸ Æ¯¼ö¹®ÀÚ
+	// ì‚¼ë³´ íŠ¹ìˆ˜ë¬¸ìž
 	m_han->LoadSpecialFont(wxT("ISPC.FNT"), SPECIAL_CODE);
 	m_han->SetSpecialCharOn();
 }

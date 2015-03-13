@@ -386,8 +386,8 @@ void GSlider::CalcGeometry(int num)
 	// Total control size 
 	GetClientSize(&totalWidth, &totalHeight); 
 
-	// sliderÀÇ ³¡ À§Ä¡´Â ÀüÃ¼ width¿¡¼­ 
-	// sliderÀÇ width¸¦ »«°ªÀÌ´Ù.
+	// sliderì˜ ë ìœ„ì¹˜ëŠ” ì „ì²´ widthì—ì„œ 
+	// sliderì˜ widthë¥¼ ëº€ê°’ì´ë‹¤.
 	//totalWidth-=(int)(knobs[num].knobWidth);
 
 	// Calculate track width and position 

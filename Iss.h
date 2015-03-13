@@ -2,21 +2,21 @@
 #define _ISS_H_
 
 typedef struct {
-	char head_str[20];  // Ã³À½¿¡ 'I' 'M' 'P'·Î ½ÃÀÛÇÕ´Ï´Ù.
-	char reserved[10];  // ±×³É ¿¹¾àµÈ ºó ¿µ¿ª
-	char writer[30];  // ÀÛ»ç°¡
-	char composer[30];  // ÀÛ°î°¡
-	char singer[30];  // °¡¼ö
-	char editor[30];  // ISS Á¦ÀÛÀÚ
+	char head_str[20];  // ì²˜ìŒì— 'I' 'M' 'P'ë¡œ ì‹œì‘í•©ë‹ˆë‹¤.
+	char reserved[10];  // ê·¸ëƒ¥ ì˜ˆì•½ëœ ë¹ˆ ì˜ì—­
+	char writer[30];  // ì‘ì‚¬ê°€
+	char composer[30];  // ì‘ê³¡ê°€
+	char singer[30];  // ê°€ìˆ˜
+	char editor[30];  // ISS ì œì‘ì
 	unsigned short rec_count;
 	unsigned short line_count;
 } ISS_HEADER;
 
 typedef struct {
-	unsigned short kasa_tick;  // ÀÌ ºÎºĞÀÌ Ã³¸®µÉ ¿¬ÁÖÁß Æ½°ªÀ» 8·Î ³ª´« °ªÀÌ¶ø´Ï´Ù
-	char line;  // °¡»ç ÁÙÀÇ ¹øÈ£ (0ºÎÅÍ ½ÃÀÛÀÔ´Ï´Ù)
-	char start_x;  // ÁÙ¿¡¼­ ½ÃÀÛµÉ ¹®ÀÚ À§Ä¡ (0ºÎÅÍ ½ÃÀÛÀÔ´Ï´Ù)
-	char width_x;  // »öÄ¥ÇÒ ¹®ÀÚ ¼ö (´ç¿¬È÷ ÇÑ±ÛÀº 2±ÛÀÚ ÀÔ´Ï´Ù)
+	unsigned short kasa_tick;  // ì´ ë¶€ë¶„ì´ ì²˜ë¦¬ë  ì—°ì£¼ì¤‘ í‹±ê°’ì„ 8ë¡œ ë‚˜ëˆˆ ê°’ì´ëë‹ˆë‹¤
+	char line;  // ê°€ì‚¬ ì¤„ì˜ ë²ˆí˜¸ (0ë¶€í„° ì‹œì‘ì…ë‹ˆë‹¤)
+	char start_x;  // ì¤„ì—ì„œ ì‹œì‘ë  ë¬¸ì ìœ„ì¹˜ (0ë¶€í„° ì‹œì‘ì…ë‹ˆë‹¤)
+	char width_x;  // ìƒ‰ì¹ í•  ë¬¸ì ìˆ˜ (ë‹¹ì—°íˆ í•œê¸€ì€ 2ê¸€ì ì…ë‹ˆë‹¤)
 } ISS_RECORD;
 
 typedef struct {
@@ -29,8 +29,8 @@ typedef struct {
 class Iss
 {
 public:
-	wxString m_fileName; // °æ·Î¸¦ Æ÷ÇÔÇÑ ÆÄÀÏ¸í
-	int	m_fileSize; // raw ¹öÆÛ·Î ÀĞ¾îµéÀÎ ½ÇÁ¦ Å©±â
+	wxString m_fileName; // ê²½ë¡œë¥¼ í¬í•¨í•œ íŒŒì¼ëª…
+	int	m_fileSize; // raw ë²„í¼ë¡œ ì½ì–´ë“¤ì¸ ì‹¤ì œ í¬ê¸°
 
 	char *raw;
 	char *rawPtr;
