@@ -20,9 +20,10 @@ CFLAGS += -g
 
 CFLAGS += `$(WXCONFIG) --cflags`
 ifeq ($(UNAME), MINGW32_NT-5.1)
-	LDFLAGS =  -lwx_mswu_stc-2.8 `$(WXCONFIG) --libs` 
+	LDFLAGS =  -lwx_mswu_stc-2.8 `$(WXCONFIG) --libs`
+	LDFLAGS += -Wl,--enable-auto-import
 else
-	LDFLAGS =  -lwx_gtk2u_stc-2.8 `$(WXCONFIG) --libs` 
+	LDFLAGS =  `$(WXCONFIG) --libs` `$(WXCONFIG) --libs aui`
 endif
 
 ifeq ($(UNAME), MINGW32_NT-5.1)
@@ -30,7 +31,6 @@ ifeq ($(UNAME), MINGW32_NT-5.1)
 endif
 
 LDFLAGS += `$(SDLCONFIG) --libs`
-LDFLAGS += -Wl,--enable-auto-import
 
 .SUFFIXES:
 .SUFFIXES: .cpp .o
