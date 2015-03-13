@@ -45,6 +45,7 @@
 #include <wx/dir.h>
 #include <wx/dirctrl.h>
 #include <wx/file.h>
+#include <wx/filedlg.h>
 #include <wx/mimetype.h>
 #include <wx/regex.h>
 #include <wx/taskbar.h>
