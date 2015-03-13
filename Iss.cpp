@@ -128,13 +128,7 @@ wxString Iss::GetSinger()
 	char singer[30];
 	han_conv(0, m_header.singer, singer);
 
-	wchar_t wszBuffer[30];
-	// cp949 -> unicode
-	MultiByteToWideChar(CP_ACP, 0, singer, -1, wszBuffer, 30);
-	// unicode -> utf-8
-	WideCharToMultiByte(CP_UTF8, 0, wszBuffer, -1, singer, 30, NULL, NULL);
-
-	return wxString(wszBuffer, wxConvUTF8);
+	return wxString(singer, wxCSConv(wxT("CP-949")));
 }
 
 bool Iss::IsOpened()
