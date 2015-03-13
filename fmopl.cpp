@@ -71,7 +71,9 @@ Revision History:
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#ifdef __linux__
 #include <malloc.h>
+#endif
 
 #include <Main.h>
 
