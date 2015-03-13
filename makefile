@@ -3,7 +3,7 @@
 # inhak.min@gmail.com
 #
 
-CC = g++
+CXX = g++
 TARGET = imsplayer
 UNAME= $(shell uname)
 
@@ -60,7 +60,7 @@ ifeq ($(UNAME), MINGW32_NT-5.1)
 	OBJECTS += imsplayer.res
 endif
 
-.cpp.o : ; $(CC) -c $(CFLAGS) -o $*.o $<
+.cpp.o : ; $(CXX) -c $(CFLAGS) -o $*.o $<
 
 %.res : %.rc
 	windres `$(WXCONFIG) --cppflags -rescomp` -i $< -J rc -o $@ -O coff
@@ -69,10 +69,10 @@ all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
 ifeq ($(UNAME), MINGW32_NT-5.1)
-	$(CC) -o $@ -mthreads -Wl,--subsystem,windows -mwindows \
+	$(CXX) -o $@ -mthreads -Wl,--subsystem,windows -mwindows \
 		$(OBJECTS) $(LDFLAGS) 
 else
-	$(CC) -o $@ $(OBJECTS) $(LDFLAGS) 
+	$(CXX) -o $@ $(OBJECTS) $(LDFLAGS) 
 endif
 
 clean:
